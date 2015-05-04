@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import sys
+
+files = sys.argv[1:]
+
+output = []
+for file in files:
+    output.append("-----------------------%s--------------------\n" % file)
+    with open(file) as f:
+        output.extend(f.readlines())
+    output.append("\n\n")
+
+print "".join(output)
