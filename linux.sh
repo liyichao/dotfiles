@@ -22,7 +22,6 @@
 
 sudo apt-get update
 
-sudo apt-get install curl
-sudo apt-get install zsh
+sudo apt-get install -y vim curl zsh
 chsh -s /bin/zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
