@@ -22,6 +22,10 @@
 
 sudo apt-get update
 
-sudo apt-get install -y vim curl zsh
+sudo apt-get install -y vim curl zsh build-essential
 chsh -s /bin/zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+fasd_version="1.0.1"
+wget https://github.com/clvv/fasd/tarball/${fasd_version} && tar xvzf ${fasd_version} \
+    && cd clvv-fasd-4822024 && sudo make install
