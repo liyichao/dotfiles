@@ -84,3 +84,7 @@ source $ZSH/oh-my-zsh.sh
 export CFB_HOSTNAME=zhihu
 export DOCKER_IP=192.168.59.103
 alias v='f -e atom'
+
+for file in ~/.{path,zsh_prompt,exports,aliases,functions,extra}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
