@@ -27,5 +27,6 @@ chsh -s /bin/zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 fasd_version="1.0.1"
-wget https://github.com/clvv/fasd/tarball/${fasd_version} && tar xvzf ${fasd_version} \
-    && cd clvv-fasd-4822024 && sudo make install
+p=`pwd`
+wget "https://github.com/clvv/fasd/tarball/${fasd_version}" && tar xvzf "${fasd_version}" -C /tmp \
+    && cd /tmp/clvv-fasd-4822024 && sudo make install && cd "${p}"
