@@ -50,6 +50,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git fasd)
 
+for file in ~/.{path,zsh_prompt,exports,aliases,functions,extra}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -85,6 +89,3 @@ export CFB_HOSTNAME=zhihu
 export DOCKER_IP=192.168.59.103
 alias v='f -e atom'
 
-for file in ~/.{path,zsh_prompt,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
